@@ -22,7 +22,7 @@ def main():
     fin.close()
     # word-level-japanese
     fout = open("word-level-japanese.out", "w")
-    fin = open("word-level-japanese", "r")
+    fin = open("word-level-japanese.tsv", "r")
     for line in fin:
         word, level = line.strip().split("\t")
         if level == "?":
@@ -32,7 +32,7 @@ def main():
     fout.close()
     # simple-ppdb-japanese
     fout = open("simple-ppdb-japanese.out", "w")
-    fin = open("simple-ppdb-japanese", "r")
+    fin = open("simple-ppdb-japanese.tsv", "r")
     for line in fin:
         paraprob, complex_word, simple_word, level_complex, level_simple = line.strip().split("\t")
         if level_complex == "?":
